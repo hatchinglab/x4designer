@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="x4designer_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="123" height="28" alignment="center" text="Hello" textAlignment="center" minimumScaleFactor="0.10000000000000014" id="Ci4-1X-QZf"/>
+                        <button width="1" alignment="left" title="Basic Controls" id="B8l-Vx-Qft">
+                            <connections>
+                                <segue destination="6Yq-To-bf2" kind="push" id="c2I-t3-USy"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Map" id="vh6-tT-vyN">
+                            <connections>
+                                <segue destination="Mxl-CV-EwL" kind="modal" id="E0Z-07-Ee9"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="IBAction Test" id="Z72-oN-wTm">
+                            <connections>
+                                <action selector="action_test" destination="AgC-eL-Hgc" id="e1G-vM-neU"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <menu key="menu" id="U2O-Y4-g77">
+                        <items>
+                            <menuItem title="Info" icon="info" id="SvD-Ki-t0a">
+                                <connections>
+                                    <action selector="action_test" destination="AgC-eL-Hgc" id="Cgt-hs-Cb5"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="More" icon="more" id="HHa-IF-2JE">
+                                <connections>
+                                    <action selector="action_test" destination="AgC-eL-Hgc" id="z6W-zz-a1I"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="label_test" destination="Ci4-1X-QZf" id="aJ9-3o-0e6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Bqg-8c-Jzy">
+            <objects>
+                <controller id="6Yq-To-bf2">
+                    <items>
+                        <slider width="1" alignment="left" value="0.5" steps="2" id="hY9-c6-mfZ"/>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="FnB-3X-DfR"/>
+                        <imageView alignment="center" image="test" id="Pia-pf-hbF"/>
+                        <label alignment="left" text="Can't see image?" id="1jI-nu-0Ip"/>
+                        <separator alignment="left" id="u47-kb-5No"/>
+                        <dateLabel alignment="left" id="yGu-cx-I9Y">
+                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                        </dateLabel>
+                        <timer alignment="left" id="8hB-0G-gO5"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="499" y="176.75"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="MZq-oO-xhS">
+            <objects>
+                <controller id="Mxl-CV-EwL">
+                    <items>
+                        <map alignment="left" id="GBm-M1-rVV"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="499" y="501"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="x4designer_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" text="There are 2 groups in Glance." numberOfLines="0" minimumScaleFactor="0.5" id="k7s-vM-5bB"/>
+                            </items>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label alignment="left" text="There should be no interactive controls in Glance, e.g. button" numberOfLines="0" id="iZu-SY-nDZ"/>
+                            </items>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController animationDuration="1" id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                        <imageView alignment="left" image="test" id="hg1-7Q-3tY"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="JfB-70-Muf"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="x4designer_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView alignment="left" image="test" id="K6z-Da-xu0"/>
+                        <label alignment="left" text="Can't see dynamic notification?" numberOfLines="0" id="Q2k-2b-Tjx"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="499" y="1019.25"/>
+        </scene>
+    </scenes>
+</document>

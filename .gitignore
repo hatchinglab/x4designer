@@ -1,0 +1,28 @@
+# Xcode
+*/build/*
+build/
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+*.xcuserstate
+*.xccheckout
+xcuserdata
+ 
+# Pods
+Pods
+Pods/*
+Podfile.lock
+*/Pods
+*/Pods/*
+*/Podfile.lock
+ 
+# Cache
+.DS_Store
+.*.sw*
+Thumbs.db
+ 
+# Temp
+*.ipa
+tmp
